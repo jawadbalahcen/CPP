@@ -1,7 +1,7 @@
 
 CC = c++
 
-SCRS = main.cpp FindReplace.cpp
+SCRS = main.cpp Harl.cpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
