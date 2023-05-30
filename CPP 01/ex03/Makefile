@@ -1,11 +1,11 @@
 
 CC = c++
 
-SCRS = Phonebook.cpp Phonebook_sub.cpp
+SCRS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = phonebook
+NAME = violence
 
 all: $(NAME)
 

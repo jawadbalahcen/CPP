@@ -1,11 +1,11 @@
 
 CC = c++
 
-SCRS = Account.cpp tests.cpp
+SCRS = main.cpp FindReplace.cpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = Account
+NAME = replace
 
 all: $(NAME)
 

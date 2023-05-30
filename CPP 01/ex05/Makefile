@@ -1,11 +1,11 @@
 
 CC = c++
 
-SCRS = megaphone.cpp
+SCRS = main.cpp FindReplace.cpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = megaphone
+NAME = Harl
 
 all: $(NAME)
 
