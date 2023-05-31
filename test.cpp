@@ -3,61 +3,29 @@
 #include <iostream>
 #include <fstream>
 
-class F
-{
-  public:
-	F()
-	{
-		i = 1;
-		c = '1';
-		p = "111";
-	}
-	void print()
-	{
-		std::cout << i << std::endl;
-		std::cout << c << std::endl;
-		std::cout << p << std::endl;
-	}
-	virtual void pp()
-	{
-		std::cout << "fuck1" << std::endl;
-	}
 
-  private:
-	int i;
-	char c;
-	std::string p;
-};
 
-class FF : public F
-{
-  public:
-	void pp()
-	{
-		std::cout << "fuck2" << std::endl;
-	}
-};
-
-class TE
-{
-	std::string s;
-};
-
-void	f(std::string *i)
-{
-	std::cout << std::cin.eof() << "\n";
-	if (std::getline(std::cin, *i).eof())
-    {
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cin.clear();
-    }
-}
 
 int	main(void)
 {
+int i;
+	std::cin >> i;
 
-	std::ifstream file("Makfile");
-
+	switch (i)
+	{
+		case 0:
+			std::cout << "0\n";
+		case 1:
+			std::cout << "1\n";
+		case 2:
+			std::cout << "2\n";
+		case 3:
+			std::cout << "3\n";
+		case 4:
+			std::cout << "4\n";
+		case 5:
+			std::cout << "5\n";
+	}
 
 	return (0);
 }
