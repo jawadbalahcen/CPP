@@ -6,14 +6,11 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 16:32:34 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/05/31 15:56:48 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/06/05 16:17:54 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#ifndef HARL_H
-# define HARL_H
-
+ç
 #include <iostream>
 
 class Harl	{
