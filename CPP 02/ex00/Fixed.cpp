@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 16:46:27 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/06/06 18:50:15 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/06/07 17:48:54 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,3 @@ void Fixed::setRawBits(int const raw)
 	std::cout << "setRawBits member function called\n";
 	value = raw;
 }
-

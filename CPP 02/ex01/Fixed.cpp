@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 16:46:27 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/06/06 18:50:53 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/06/12 18:23:41 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Fixed::Fixed() : value(0) {
 	std::cout << "Default constructor called\n";
 }
 
-Fixed::Fixed(Fixed &obj)
+Fixed::Fixed(const Fixed &obj)
 {
 	std::cout << "Copy constructor called\n";
 	value = obj.value; 
@@ -36,7 +36,6 @@ Fixed::~Fixed()
 
 int Fixed::getRawBits(void) const 
 {
-	std::cout << "getRawBits member function called\n";
 	return (value);
 }
 
@@ -46,3 +45,33 @@ void Fixed::setRawBits(int const raw)
 	value = raw;
 }
 
+Fixed::Fixed(const int n) : value(n << frac_bits)
+{
+	std::cout << "Int constructor called\n";
+}
+
+Fixed::Fixed(const float n) : value((n * (1 << frac_bits)))
+{
+	std::cout << "Float constructor called\n";
+}
+
+int Fixed::toInt( void ) const
+{
+	return(value / (1 << frac_bits));	
+}
+
+float Fixed::toFloat( void ) const
+{
+	float ret = value;
+	return(ret / (1 << frac_bits));
+}
+
+std::ostream &operator<<(std::ostream &os, const Fixed &fixed)
+{
+	double	floatingPointValue;
+
+	floatingPointValue = (fixed.getRawBits());
+	floatingPointValue /= (1 << 8);
+	os << floatingPointValue;
+	return (os);
+}
