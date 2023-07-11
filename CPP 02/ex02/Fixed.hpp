@@ -16,7 +16,7 @@
 
 #include <iostream>
 #include <cmath>
-
+#define EP 0.00390625f
 
 class Fixed {
 	
@@ -38,6 +38,29 @@ class Fixed {
 
 	float toFloat( void ) const;
 	int toInt( void ) const;
+
+	static Fixed &min(Fixed &obj1, Fixed &obj2);
+	static const Fixed &min(const Fixed &obj1, const Fixed &obj2);
+
+	static Fixed &max(Fixed &obj1, Fixed &obj2);
+	static const Fixed &max(const Fixed &obj1, const Fixed &obj2);
+	//arithmetic operators  
+	Fixed operator+(const Fixed &obj);
+	Fixed operator-(const Fixed &obj);
+	Fixed operator*(const Fixed &obj);
+	Fixed operator/(const Fixed &obj);
+	//comparison operators
+	bool operator>(const Fixed &obj) const;
+	bool operator<(const Fixed &obj) const;
+	bool operator>=(const Fixed &obj) const;
+	bool operator<=(const Fixed &obj) const;
+	bool operator==(const Fixed &obj) const;
+	bool operator!=(const Fixed &obj) const;
+	// (in/de)crement
+	Fixed& operator++();
+	Fixed& operator--();
+	Fixed operator++(int a);
+	Fixed operator--(int a);
 };
 
 std::ostream &operator<<(std::ostream &os, const Fixed &fixed);

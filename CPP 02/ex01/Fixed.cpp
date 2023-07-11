@@ -50,7 +50,7 @@ Fixed::Fixed(const int n) : value(n << frac_bits)
 	std::cout << "Int constructor called\n";
 }
 
-Fixed::Fixed(const float n) : value((n * (1 << frac_bits)))
+Fixed::Fixed(const float n) : value(std::roundf(n * (1 << frac_bits)))
 {
 	std::cout << "Float constructor called\n";
 }
