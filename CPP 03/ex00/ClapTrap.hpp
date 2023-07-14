@@ -1,38 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Point.hpp                                          :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/10 19:19:54 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/07/11 18:42:32 by jbalahce         ###   ########.fr       */
+/*   Created: 2023/07/11 18:29:39 by jbalahce          #+#    #+#             */
+/*   Updated: 2023/07/13 23:31:04 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef POINT_H
-# define POINT_H
+#ifndef CLAPTRAP_H
+# define CLAPTRAP_H
 
-#include "Fixed.hpp"
+#include <iostream>
 
-class Point
+class ClapTrap
 {
   private:
-    Fixed const x;
-    Fixed const y;
-
+    std::string name;
+    int hit_points;
+    int energy_points;
+    int attack_damage;
   public:
-    Fixed get_x() const;
-    Fixed get_y() const;
-    Point();
-    Point(float a, float b);
-    Point(const Point &obj);
-    Point& operator=(const Point& other);
-    ~Point();
+    ClapTrap();
+    ClapTrap(const ClapTrap &copy);
+    ClapTrap& operator=(const ClapTrap& obj);
+    ClapTrap(std::string Name);
+    ~ClapTrap();
+    void attack(const std::string& target);
+    void takeDamage(unsigned int amount);
+    void beRepaired(unsigned int amount);
 };
-
-Fixed find_area(Point const a, Point const b, Point const c);
-bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif

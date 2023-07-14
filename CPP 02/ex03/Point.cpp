@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 23:16:36 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/07/11 17:26:53 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/07/11 19:59:09 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ Point::Point(const Point &obj) : x(obj.x), y(obj.y) {}
 
 Point& Point::operator=(const Point& obj)
 {
-	if (this != &obj)
-    {
-        (Fixed&)(x) = obj.x;
-        (Fixed&)(y) = obj.y;
-    }
+	// if (this != &obj)
+    // {
+    //     (Fixed&)(x) = obj.x;
+    //     (Fixed&)(y) = obj.y;
+    // }
 	return (*this);
 }
 

@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Point.hpp                                          :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/10 19:19:54 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/07/11 18:42:32 by jbalahce         ###   ########.fr       */
+/*   Created: 2023/07/13 08:16:38 by jbalahce          #+#    #+#             */
+/*   Updated: 2023/07/13 23:40:15 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#ifndef POINT_H
-# define POINT_H
+#ifndef SCAVTRAP_H
+# define SCAVTRAP_H
 
-#include "Fixed.hpp"
+#include <iostream>
+#include "ClapTrap.hpp"
 
-class Point
+class ScavTrap : public ClapTrap
 {
-  private:
-    Fixed const x;
-    Fixed const y;
-
   public:
-    Fixed get_x() const;
-    Fixed get_y() const;
-    Point();
-    Point(float a, float b);
-    Point(const Point &obj);
-    Point& operator=(const Point& other);
-    ~Point();
+    ScavTrap();
+    ScavTrap(const std::string& _name);
+    ~ScavTrap();
+    void guardGate();
+
 };
 
-Fixed find_area(Point const a, Point const b, Point const c);
-bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif
