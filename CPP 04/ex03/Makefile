@@ -1,11 +1,11 @@
 
 CC = c++
 
-SCRS = main.cpp ClapTrap.cpp ScavTrap.cpp fragTrap.cpp DiamondTrap.cpp
+SCRS = main.cpp Ice.cpp Cure.cpp AMateria.cpp Character.cpp MateriaSource.cpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = DiamondTrap
+NAME = AMateria
 
 all: $(NAME)
 
