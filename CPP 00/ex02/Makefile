@@ -1,5 +1,5 @@
 
-CC = c++
+CC = clang++
 
 SCRS = Account.cpp tests.cpp
 

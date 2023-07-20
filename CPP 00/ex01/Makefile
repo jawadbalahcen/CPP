@@ -1,5 +1,5 @@
 
-CC = c++
+CC = clang++
 
 SCRS = Phonebook.cpp Phonebook_sub.cpp
 
