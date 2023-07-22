@@ -1,5 +1,5 @@
 
-CC = c++
+CC = clang++
 
 SCRS = Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
 

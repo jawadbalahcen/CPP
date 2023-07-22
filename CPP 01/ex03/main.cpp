@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 19:52:03 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/05/28 22:06:12 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/07/22 15:02:29 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int main()
 		Weapon  club = Weapon("gun");
 		HumanA bob("Bob", club);
 		bob.attack();
-		club.setType("dick");
+		club.setType("cat");
 		bob.attack();
 	}
 	{
-		Weapon  club = Weapon("knif");
+		Weapon  club = Weapon("knife");
 		HumanB jim("Jim");
 		jim.setWeapon(club);
 		jim.attack();

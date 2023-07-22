@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 16:32:37 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/05/30 18:47:05 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/07/22 15:27:45 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main()
 	int randomNumber;
 	for (int i = 0; i < 15; i++)
 	{
-		randomNumber = std::rand() % (3 + 1);
+		randomNumber = std::rand() % (4);
 		harl.complain(COMMENTS[randomNumber]);
 	}
 }

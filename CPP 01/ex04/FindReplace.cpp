@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 16:24:55 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/05/30 16:25:20 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/07/22 15:15:46 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void FindReplace::replace(std::string buffer)
 	std::size_t pos = buffer.find(s1);
 	while (i < buffer.length())
 	{
-		if (i == pos)
+		if (i == pos && !s1.empty())
 		{
 			file1 << s2;
 			pos = buffer.find(s1, pos + s1.length());
