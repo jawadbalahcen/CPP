@@ -1,5 +1,5 @@
 
-CC = clang++
+CC = c++
 
 SCRS = megaphone.cpp
 

@@ -1,5 +1,5 @@
 
-CC = clang++
+CC = c++
 
 SCRS = Zombie.cpp main.cpp zombieHorde.cpp
 
