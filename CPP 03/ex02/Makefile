@@ -5,7 +5,7 @@ SCRS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 
 
-NAME = ScavTrap
+NAME = FragTrap
 
 all: $(NAME)
 

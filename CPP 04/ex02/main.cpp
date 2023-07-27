@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 01:30:29 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/07/15 02:12:19 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/07/27 14:29:09 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,20 @@
 
 int main() 
 {
-    Animal *animals[4];
+    Animal *animals[6];
     
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < 3; i++)
+    {
         animals[i] = new Dog();
-    for (int i = 0; i < 2; i++)
-        animals[i + 2] = new Cat();
-    for (int i = 0; i < 4; i++)
-        {std::cout<< "NAME   " << animals[i]->getType() + "  " << std::endl; 
-        animals[i]->makeSound();}
-        
-    for (int i = 0; i < 4; i++)
+        animals[i + 3] = new Cat();
+    }
+    std::cout << std::endl;
+    for (int i = 0; i < 6; i++)
+    {
+        std::cout<< "TYPE:   " << animals[i]->getType() + "  " << std::endl << "---> "; 
+        animals[i]->makeSound();
+    }
+    std::cout << std::endl;
+    for (int i = 0; i < 6; i++)
         delete animals[i];
 }

@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 19:39:44 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/07/11 18:09:02 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/07/25 11:47:38 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Fixed find_area(Point const a, Point const b, Point const c)
 {
-    //X1.Y2 + X2.Y3 + X3.Y1  - (X1.Y3 + X2.Y1 + X3.Y2)
+    // | X1.Y2 + X2.Y3 + X3.Y1  - (X1.Y3 + X2.Y1 + X3.Y2) | / 2
     Fixed value = (a.get_x()*b.get_y() + b.get_x()*c.get_y() + c.get_x()*a.get_y())
                 - (a.get_x()*c.get_y() + b.get_x()*a.get_y() + c.get_x()*b.get_y());
     if (value < 0)

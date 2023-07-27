@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 18:46:02 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/07/13 07:40:40 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/07/26 13:10:04 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int main()
 {
-    ClapTrap a("fuck");
+    ClapTrap a("BIG EYE");
     
-    a.attack("damn");
+    a.attack("BIG NOSE");
     a.beRepaired(10);  
     a.takeDamage(45);
-    a.attack("damn");
+    a.attack("BIG MOUTH");
     a.beRepaired(10);
 
     return 0;

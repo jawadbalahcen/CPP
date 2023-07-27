@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 16:17:42 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/06/12 18:24:19 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/07/25 11:28:30 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include <iostream>
 #include <cmath>
-#define EP 0.00390625f
+#define EP 0.00390625f  // 2^(-frac_bits)
 
 class Fixed {
 	

@@ -6,11 +6,16 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 05:33:23 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/07/15 01:34:44 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/07/27 14:17:37 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
+
+void *Cat::get_brain()
+{
+  return ((void*)brain);
+}
 
 Cat::Cat()
 {
@@ -22,14 +27,22 @@ Cat::Cat()
 Cat::Cat(const Cat &copy)
 {
     std::cout << "Cat Copy Constructor called" << std::endl;
-	*this = copy;
+    if (this->type == "Cat")
+        delete this->brain;
+	this->type = copy.type;
+	this->brain = new Brain(*(copy.brain));
 }
 
 Cat& Cat::operator=(const Cat& obj)
 {
     std::cout << "Cat Copy assignment Constructor called" << std::endl;
     if (this != &obj)
+    {
+        if (this->type == "Cat")
+            delete this->brain;
+        this->brain = new Brain(*(obj.brain));
         this->type = obj.type;
+    }
     return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 22:27:00 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/07/14 23:37:28 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/07/27 12:00:53 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ WrongAnimal::WrongAnimal(const WrongAnimal &copy)
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& obj)
 {
-    std::cout << "ClapTrap Copy assignment Constructor called" << std::endl;
+    std::cout << "WrongAnimal Copy assignment Constructor called" << std::endl;
     if (this != &obj)
         this->type = obj.type;
     return (*this);

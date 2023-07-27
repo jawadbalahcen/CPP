@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 05:08:45 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/07/14 23:47:55 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/07/27 14:04:45 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Cat : public Animal
     ~Cat();
     void makeSound() const;
     std::string getType() const;
+    void *get_brain();
 };
 
 #endif

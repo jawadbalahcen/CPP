@@ -6,14 +6,14 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 16:46:27 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/07/10 22:46:39 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/07/25 11:26:25 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
 Fixed::Fixed() : value(0) {
-	// //std::cout << "Default constructor called\n";
+	std::cout << "Default constructor called\n";
 }
 
 Fixed::Fixed(const Fixed &obj)
@@ -31,7 +31,7 @@ Fixed& Fixed::operator=(const Fixed& obj)
 
 Fixed::~Fixed()
 {
-	//std::cout << "Destructor called\n";
+	std::cout << "Destructor called\n";
 }
 
 int Fixed::getRawBits(void) const 
@@ -46,12 +46,12 @@ void Fixed::setRawBits(int const raw)
 
 Fixed::Fixed(const int n) : value(n << frac_bits)
 {
-	//std::cout << "Int constructor called\n";
+	std::cout << "Int constructor called\n";
 }
 
 Fixed::Fixed(const float n) : value(std::roundf(n * (1 << frac_bits)))
 {
-	//std::cout << "Float constructor called\n";
+	std::cout << "Float constructor called\n";
 }
 
 int Fixed::toInt( void ) const

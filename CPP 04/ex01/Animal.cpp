@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 22:27:00 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/07/14 23:35:46 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/07/27 12:00:30 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Animal::Animal(const Animal &copy)
 
 Animal& Animal::operator=(const Animal& obj)
 {
-    std::cout << "ClapTrap Copy assignment Constructor called" << std::endl;
+    std::cout << "Animal Copy assignment Constructor called" << std::endl;
     if (this != &obj)
         this->type = obj.type;
     return (*this);
