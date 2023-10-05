@@ -36,15 +36,15 @@ class Bureaucrat
 
     class GradeTooLowException : public std::exception {
       public:
-        ~GradeTooLowException() _NOEXCEPT {}
-        const char* what() const _NOEXCEPT {
+        ~GradeTooLowException() throw() {}
+        const char* what() const throw() {
             return ("\033[31mgrade too low\033[0m");
         }
     };
     class GradeTooHighException : public std::exception {
       public:
-        ~GradeTooHighException() _NOEXCEPT {}
-        const char* what() const _NOEXCEPT {
+        ~GradeTooHighException() throw() {}
+        const char* what() const throw() {
             return ("\033[31mgrade too high\033[0m");
         }
     };
