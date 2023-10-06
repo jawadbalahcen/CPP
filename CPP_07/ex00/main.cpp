@@ -5,33 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 17:23:42 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/10/05 18:53:41 by jbalahce         ###   ########.fr       */
+/*   Created: 2023/10/06 15:04:04 by jbalahce          #+#    #+#             */
+/*   Updated: 2023/10/06 15:46:45 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Base.hpp"
+#include "whatever.hpp"
 
-int main()
+int main( void )
 {
-    srand(time(NULL));  
-    Base *p1 = generate();
-    Base *p2 = generate();
-    Base *p3 = generate(); 
-    Base *p4 = NULL;
-    
-    identify(*p1);
-    identify(*p2);
-    identify(*p3);
-    identify(*p4);
-    std::cout << "\n";
-    identify(p1);
-    identify(p2);
-    identify(p3);
-    identify(p4);
-    
-    delete p1;
-    delete p2;
-    delete p3;
-    delete p4;
+    int a = 2;
+    int b = 3;
+
+    ::swap( a, b );
+    std::cout << "a = " << a << ", b = " << b << std::endl;
+    std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+    std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+
+    std::string c = "chaine1";
+    std::string d = "chaine2";
+    ::swap(c, d);
+    std::cout << "c = " << c << ", d = " << d << std::endl;
+    std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+    std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+    return 0;
 }

@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 17:23:42 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/10/05 18:53:41 by jbalahce         ###   ########.fr       */
+/*   Created: 2023/10/06 14:55:55 by jbalahce          #+#    #+#             */
+/*   Updated: 2023/10/06 15:14:31 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Base.hpp"
+#pragma once
 
-int main()
+#include <iostream>
+
+template <typename T1>
+void swap(T1 &a, T1 &b)
 {
-    srand(time(NULL));  
-    Base *p1 = generate();
-    Base *p2 = generate();
-    Base *p3 = generate(); 
-    Base *p4 = NULL;
-    
-    identify(*p1);
-    identify(*p2);
-    identify(*p3);
-    identify(*p4);
-    std::cout << "\n";
-    identify(p1);
-    identify(p2);
-    identify(p3);
-    identify(p4);
-    
-    delete p1;
-    delete p2;
-    delete p3;
-    delete p4;
+    T1 tmp = a;
+    a = b;
+    b = tmp;
+}
+
+template <typename T2>
+T2 min(T2 &a, T2 &b)
+{
+    if (a < b)
+        return (a);
+    return (b);
+}
+
+template <typename T3>
+T3 max(T3 &a, T3 &b)
+{
+    if (a > b)
+        return (a);
+    return (b);
 }

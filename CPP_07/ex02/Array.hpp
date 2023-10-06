@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 17:23:42 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/10/05 18:53:41 by jbalahce         ###   ########.fr       */
+/*   Created: 2023/10/06 15:47:36 by jbalahce          #+#    #+#             */
+/*   Updated: 2023/10/06 17:10:49 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Base.hpp"
+#pragma once
 
-int main()
+#include <iostream>
+
+template <typename T>
+void iter(T* array, size_t length, void (*func)(T &))
 {
-    srand(time(NULL));  
-    Base *p1 = generate();
-    Base *p2 = generate();
-    Base *p3 = generate(); 
-    Base *p4 = NULL;
-    
-    identify(*p1);
-    identify(*p2);
-    identify(*p3);
-    identify(*p4);
-    std::cout << "\n";
-    identify(p1);
-    identify(p2);
-    identify(p3);
-    identify(p4);
-    
-    delete p1;
-    delete p2;
-    delete p3;
-    delete p4;
+    for (size_t i = 0; i < length; ++i)
+        func(array[i]);
 }
+
+template <typename T>
+void print(T &a)
+{
+    std::cout << a << std::endl;
+}
+
