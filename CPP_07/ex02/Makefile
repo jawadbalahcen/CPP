@@ -4,7 +4,7 @@ SCRS = main.cpp
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = iter
+NAME = Array
 
 all: $(NAME)
 
