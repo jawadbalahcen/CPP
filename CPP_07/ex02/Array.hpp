@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:47:36 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/10/07 16:31:25 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/10/07 17:08:56 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <cstdlib>
 
 template <typename T>
 class Array {
