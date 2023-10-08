@@ -67,6 +67,15 @@
 		"numeric": "cpp",
 		"random": "cpp",
 		"__functional_base_03": "cpp",
-		"filesystem": "cpp"
+		"filesystem": "cpp",
+		"*.tcc": "cpp",
+		"clocale": "cpp",
+		"compare": "cpp",
+		"concepts": "cpp",
+		"list": "cpp",
+		"memory_resource": "cpp",
+		"numbers": "cpp",
+		"ranges": "cpp",
+		"span": "cpp"
 	}
 }
