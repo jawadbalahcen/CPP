@@ -1,9 +1,9 @@
 
-SRC = main.cpp BitcoinExchange.cpp
+SRC = main.cpp RPN.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = btc
+NAME = RPN
 
 CC = c++
 
