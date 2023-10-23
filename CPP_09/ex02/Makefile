@@ -1,13 +1,13 @@
 
-SRC = main.cpp PmergeMe.cpp PmergeMe.hpp
+SRC = main.cpp PmergeMe.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = PmergeMe.cpp
+NAME = PmergeMe
 
 CC = c++
 
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
 all : $(NAME)
 

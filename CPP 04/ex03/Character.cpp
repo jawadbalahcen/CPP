@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 07:26:11 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/07/17 11:26:39 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/10/23 15:54:40 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void Character::unequip(int idx)
     {
 		AMateria *ptr = (this->inventory)[idx];
 	    std::cout << this->name << " unequipped " << ptr->getType() << " at slot "<< idx << "\n";
-	    (this->inventory)[idx] = 0;  
+	    (this->inventory)[idx] = 0;
     }
     else
         std::cout << "can't unequip that \n";
