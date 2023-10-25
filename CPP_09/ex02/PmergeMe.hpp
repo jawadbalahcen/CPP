@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 17:24:12 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/10/23 21:32:23 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/10/25 10:13:46 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,31 @@
 
 #include <iostream>
 #include <algorithm>
-#include <stack>
 #include <vector>
+#include <deque>
+#include <ctime>
 
 class PmergeMe
 {
     private:
-        std::vector<int> nums;
+        std::vector<int> vector_nums;
+        std::deque<int> deque_nums;
 
     private:
         void validate(char **av);
         void is_digit(char *str);
-        int smaller(int index);
-        void sort();
+        template <typename T>
+        int smaller(int index,T &nums);
+        template <typename T>
+        double sort(T &nums);
+        void print_nums(std::string str);
         
     public:
+        PmergeMe();
+        ~PmergeMe();
         PmergeMe(char **av);
-        void print_nums();
+        PmergeMe(PmergeMe &obj);
+        PmergeMe &operator=(const PmergeMe &obj);
 };
 
 void Error();

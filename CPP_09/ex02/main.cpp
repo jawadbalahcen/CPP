@@ -6,7 +6,7 @@
 /*   By: jbalahce <jbalahce@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 17:23:44 by jbalahce          #+#    #+#             */
-/*   Updated: 2023/10/23 21:57:14 by jbalahce         ###   ########.fr       */
+/*   Updated: 2023/10/25 09:47:43 by jbalahce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void Error()
 {
-    std::cout << "Error: not a valid set of numbers.\n";
+    std::cout << "Error\n";
     exit(1);
 }
 
@@ -27,7 +27,4 @@ int main(int ac , char **av)
     }
 
     PmergeMe sort_nums(&av[1]);
-
-    sort_nums.print_nums();
-        
 }
