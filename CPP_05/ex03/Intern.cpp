@@ -46,5 +46,5 @@ AForm *Intern::makeForm(std::string form_name, std::string form_target)
     if (i != -1)
         return (forms[i]);
     std::cout << "\033[31mError:\033[0m Form \"" + form_name + "\" doesn't exist.\n";
-    return (nullptr);
+    return (NULL);
 }

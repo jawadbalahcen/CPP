@@ -20,10 +20,10 @@ int main()
     //    Bureaucrat c("c",0);  // exception
     //    Bureaucrat b("b",200); // exception
        std::cout << a;
+       a.decrement();
        a.increment();
        a.increment();
        std::cout << a;
-       a.decrement();
        std::cout << a;
        a.decrement();
     //    a.decrement(); // exception

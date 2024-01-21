@@ -12,8 +12,6 @@
 
 #include "Form.hpp"
 
-
-
 Form::~Form() {}
 
 Form::Form(std::string _name, bool _is_signed, int _sign_grade, int _exe_grade) : name(_name) , is_signed(_is_signed), sign_grade(_sign_grade), exe_grade(_exe_grade)

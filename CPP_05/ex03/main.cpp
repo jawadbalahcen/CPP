@@ -16,6 +16,9 @@ int main()
 {
 	Intern A;
 	
+	PresidentialPardonForm a;
+	PresidentialPardonForm b(a);
+
 	AForm *tes1 = A.makeForm("ShrubberyCreationForm", "target");
 	AForm *tes2 = A.makeForm("NON", "tar");
 	AForm *tes3 = A.makeForm("RobotomyRequestForm", "TTT");
@@ -26,6 +29,8 @@ int main()
 	Bureaucrat B3("B3", 15);
 	Bureaucrat B4("B4", 1);
 
+	std::cout << "|" << a.getExe_grade() << "|" << std::endl;
+	std::cout << "|" << b.getExe_grade() << "|" << std::endl;
 	try
 	{
 		if (tes1)

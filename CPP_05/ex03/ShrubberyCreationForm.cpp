@@ -16,7 +16,7 @@ ShrubberyCreationForm::ShrubberyCreationForm() : AForm("ShrubberyCreationForm", 
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string Target) : AForm("ShrubberyCreationForm", false, 145, 137), target(Target) {}
 
-ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &copy) {
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &copy) : AForm(copy) {
     *this = copy;
 }
 
@@ -37,7 +37,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     if (executor.getGrade() > getExe_grade())
         throw (AForm::GradeTooLowException());
         
-    std::ofstream outputFile(target + "_shrubbery");
+    std::ofstream outputFile((target + "_shrubbery").c_str());
     
     if (!outputFile)
         throw std::runtime_error("Error in outputfile");
